@@ -1,0 +1,30 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'ex1'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=ex1",
+                    "--package=ex1"
+                ],
+                "filter": {
+                    "name": "ex1",
+                    "kind": "bin"
+                }
+            },
+            "args": [
+                "abc.txt",
+                "target.txt"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+        },
+    ]
+}
